@@ -16,6 +16,15 @@
         </aop:aspect>
     </aop:config>
 
+    <bean id="loginAdvice" class="com.springbook.biz.common.LoginLogging"></bean>
+    <aop:config>
+        <aop:pointcut id="loginPointcut"
+                      expression="execution(* com.springbook.biz.user.impl.UserDAO.getUser(..))"/>
+    <aop:aspect ref="loginAdvice">
+        <aop:after-returning pointcut-ref="loginPointcut" method="log" returning="returnObj"></aop:after-returning>
+    </aop:aspect>
+    </aop:config>
+
 
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
         <property name="dataSource" ref="dataSource"></property>

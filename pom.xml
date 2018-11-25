@@ -27,9 +27,16 @@
             <version>1.4</version>
         </dependency>
 
+        <!--aspectj-->
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>1.8.10</artifactId>
+            <version>${org.aspectj.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.1</version>
         </dependency>
     </dependencies>
 

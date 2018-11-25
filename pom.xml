@@ -26,6 +26,11 @@
             <artifactId>commons-dbcp</artifactId>
             <version>1.4</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>1.8.10</artifactId>
+        </dependency>
     </dependencies>
 
 
